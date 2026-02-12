@@ -1,0 +1,38 @@
+@media screen and (max-width:768px) {
+    
+    /* 移除thead */
+    .table-rwd thead {
+        display: none;
+    }
+
+    .table-rwd tbody tr {
+        display: block;
+        border: 1px solid var(--ss-scorched-earth);
+        margin-top: 10px;
+    }
+
+    .table-rwd tbody tr td {
+        display: block;
+        overflow: hidden;
+    }
+
+    /* 偽元素 */
+    .table-rwd tbody tr td::before {
+        content: attr(data-th)" : ";
+        color: var(--graffiti-faded-purple);
+        font-size: 16px;
+        font-weight: 900;
+        display: block;
+        float: left;
+        width: 30%;
+        text-align: right;
+        padding-right: 1.5em;
+    }
+
+    .table-rwd tbody tr td span {
+        display: block;
+        float: left;
+        width: 70%;
+    }            
+
+}

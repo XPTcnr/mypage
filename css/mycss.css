@@ -1,0 +1,265 @@
+/*Noto字型*/
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+} */
+
+/*柔軟可愛，帶點優雅的 Zen Maru Gothic 字型*/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+body{
+     font-family: "Zen Maru Gothic", sans-serif;
+}
+
+/*配色*/
+:root{
+/* --- 淺色系 (Light / Backgrounds) --- */
+    --ss-mist: #F8FAF9;          /* 01 晨霧白：極淺，幾乎接近白，作為基底背景非常乾淨 */
+    --ss-surface: #DDE6E4;       /* 02 石蓮灰：提升了亮度，當卡片背景時與白色底有微差 */
+    --ss-dusty-leaf: #A7BCB9;    /* 03 塵葉綠：加深了灰綠感，與 02 產生明顯的明暗階梯 *
+
+    /* --- 中間色系 (Medium / Accents) --- */
+    --ss-succulent-blue: #85B8CB; /* 04 迷霧葉藍 (原02)：主題點綴色 */
+    --ss-glacier: #5E9AB0;       /* 05 冰川藍：適合次要按鈕 */
+    --ss-deep-water: #3F82A3;    /* 06 深潭藍：介於主色與次色之間 */
+
+    /* --- 深色系 (Dark / Primary & Text) --- */
+    --ss-ocean: #1D6A96;         /* 07 深海藍 (原03)：主要按鈕、標題 */
+    --ss-trench: #144D6D;        /* 08 海溝藍：按鈕 Hover 效果、導覽列 */
+    --ss-night: #283B42;         /* 09 暗影苔蘚 (原04)：主要文字顏色 */
+    --ss-abyss: #1A262A;         /* 10 深淵黑：最深的邊框或極深色背景 */
+
+    
+    /* 沙地與暖陽 */
+    --ss-dune-gold: #E2B15A;       /* 金色沙丘 */
+    --ss-sahara-sand: #F4D35E;     /* 撒哈拉淺沙 */
+    --ss-heat-haze: #EFE6D5;       /* 熱浪米色 */
+    --ss-morning-ember: #FF8C61;   /* 清晨餘燼 */
+  
+    /* 岩石與大地 */
+    --ss-sunset-clay: #D96C06;     /* 落日黏土 */
+    --ss-copper-canyon: #AD5D4E;   /* 銅紅峽谷 */
+    --ss-nomad-brown: #7B5040;     /* 遊牧深褐 */
+    --ss-scorched-earth: #4D2D18;  /* 焦灼大地 */
+    --ss-basalt-gray: #545454;     /* 玄武岩灰 */
+
+    /* 植物與綠洲 */
+    --ss-cactus-flesh: #8BA888;    /* 仙人掌綠 */
+    --ss-sage-shrub: #A0B2A6;      /* 鼠尾草灰綠 */
+    --ss-oasis-teal: #008080;      /* 綠洲湖水綠 */
+    --ss-desert-rose: #C38D9E;     /* 荒漠玫瑰粉 */
+
+    /* 幻影與暮光 */
+    --ss-mirage-blue: #A2C4C9;     /* 海市蜃樓藍 */
+    --ss-twilight-purple: #4E4E6A; /* 沙漠暮光紫 */
+
+    --jp-orange: #FF8C42;       /* 蜜柑橘：主色 */
+    --jp-yellow: #FFD166;       /* 奶油黃：副色 */
+    --jp-soft-cream: #FFF9EC;    /* 煉乳白：背景色 */
+    --jp-brown: #5D4037;         /* 焙茶棕：文字色（比純黑更柔和） */
+
+
+    /* 文字顏色 */
+    --text-color01: #f2f2f5;
+
+
+    /* 混凝土 / 城市底色 */
+    --graffiti-concrete-ash: #BDBDBF;
+    /* 水泥灰塵 */
+    --graffiti-smog-gray: #8A8C8F;
+    /* 工業霧霾 */
+    --graffiti-wall-crack: #5F6163;
+    /* 牆面裂紋 */
+
+    /* 冷色系 / 夜城感 */
+    --graffiti-rusty-blue: #5580A0;
+    /* 生鏽藍漆 */
+    --graffiti-neon-ocean: #3A6F7D;
+    /* 退色霓虹藍 */
+    --graffiti-deep-alley: #002C2F;
+    /* 深巷暗影 */
+    --graffiti-toxic-teal: #1F4E4A;
+    /* 污濁綠藍 */
+
+    /* 暖色系 / 鏽蝕與塗鴉 */
+    --graffiti-burnt-ochre: #CC8A4D;
+    /* 燒焦赭石 */
+    --graffiti-rust-orange: #9E5B2A;
+    /* 鐵鏽橘 */
+    --graffiti-dried-blood: #7A2E2A;
+    /* 乾涸血漬 */
+    --graffiti-brick-dust: #A14A3B;
+    /* 磚牆粉塵 */
+
+    /* 暗黑系 / 頹廢核心 */
+    --graffiti-asphalt-black: #1B1B1B;
+    /* 柏油黑 */
+    --graffiti-oil-stain: #0F1412;
+    /* 油漬暗黑 */
+    --graffiti-basement-shadow: #232122;
+    /* 地下室陰影 */
+
+    /* 金屬 / 工業感 */
+    --graffiti-steel-mist: #6F7C7A;
+    /* 鋼鐵霧感 */
+    --graffiti-lead-gray: #4B4E50;
+    /* 鉛灰色 */
+    --graffiti-gunmetal: #2F3538;
+    /* 槍鐵灰 */
+
+    /* 點綴 / 塗鴉亮色 */
+    --graffiti-acid-yellow: #C2C94B;
+    /* 酸性黃 */
+    --graffiti-toxic-lime: #7E8F3A;
+    /* 有毒萊姆 */
+    --graffiti-faded-purple: #5A4A63;
+    /* 退色紫噴漆 */
+
+
+}
+
+/*文字相關*/
+.fw-100{
+    font-size: 100;
+}
+.fw-200{
+    font-size: 200;
+}
+.fw-300{
+    font-size: 300;
+}
+.fw-400{
+    font-size: 400;
+}
+.fw-500{
+    font-size: 500;
+}
+.fw-600{
+    font-size: 600;
+}
+.fw-700{
+    font-size: 700;
+}
+.fw-800{
+    font-size: 800;
+}
+.fw-900{
+    font-size: 900;
+}
+
+.title-01{
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--ss-mirage-blue);
+    text-shadow: 
+        2px 2px var(--ss-cactus-flesh),
+        2px 2px rgba(0, 0, 0 ,0.6);
+    letter-spacing: 3px;
+}
+
+.title-02{
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--ss-twilight-purple);
+}
+
+.title-jp-cute {
+    /* 1. 基礎設定：稍微加大字體，日系風格標題通常很大方 */
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--jp-orange);     /* 使用蜜柑橘作為主色 */
+    
+    /* 2. 核心：立體感陰影 (Text-Shadow) */
+    /* 第一層：奶油黃邊框 | 第二層：稍微深一點的橘色立體感 | 第三層：柔和的深色陰影 */
+    text-shadow: 
+        2px 2px 0px var(--jp-yellow), 
+        4px 4px 0px rgba(255, 140, 66, 0.3),
+        5px 5px 10px rgba(0, 0, 0, 0.1);
+    
+    /* 3. 間距與裝飾 */
+    letter-spacing: 5px;        /* 拉開字距，增加清爽感 */
+    line-height: 1.5;
+    display: inline-block;      /* 為了讓旋轉效果生效 */
+    
+    /* 4. 加一點點俏皮的歪斜感 (日式可愛常見的小技巧) */
+    transform: rotate(-2deg);
+    
+    /* 5. 字體選擇 (補充建議) */
+    /* 如果你的電腦有安裝，使用圓體字會讓可愛度倍增 */
+    font-family: "Microsoft JhengHei", "Rounded Mplus 1c", sans-serif;
+}
+
+/* roller .roller-l  .roller-r  .roller-t   .roller-b */
+.roller-l {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-l .roller-l_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* 更有旅遊氛圍的漸層（夕陽+海岸色調） */
+    background: linear-gradient(135deg,
+            rgba(255, 204, 153, 0.25) 0%,
+            rgba(255, 140, 66, 0.55) 40%,
+            rgba(0, 180, 216, 0.45) 100%);
+
+    /* 柔焦玻璃質感 */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    left: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 柔和過渡 */
+    transition: left 0.9s cubic-bezier(0.77, 0, 0.175, 1),
+        opacity 0.6s ease,
+        transform 0.8s ease;
+
+    /* 初始透明感 */
+    opacity: 0.95;
+
+    /* 微立體感 */
+    box-shadow:
+        inset 0 0 80px rgba(255, 255, 255, 0.15),
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    /* 細緻圓角（若父層有圓角會更自然） */
+    border-radius: 12px;
+
+    /* 微縮放增加動態感 */
+    transform: scale(1.05);
+}
+
+
+.roller-l:hover .roller-l_box {
+    left: 0;
+}
+
+.roller-r {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-r .roller-r_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(228, 205, 186, 0.3), rgba(214, 107, 20, 0.6));
+    right: -100%;
+    display: flex;
+    /* 垂直置中 */
+    align-items: center;
+    /* 水平置中 */
+    justify-content: center;
+    transition: right 1s;
+}
+
+.roller-r:hover .roller-r_box {
+    right: 0;
+}
