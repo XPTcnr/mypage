@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch6. 地方美食列表</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="title-01 text-center">地方美食列表</div>
+    <div class="container">
+        <div class="row" id="myrow">
+            <div class="col-md-6 col-lg-4 col-xl-3 roller-l">
+                <div class="roller-l_box">
+                    <button class="btn btn-primary">查看更多</button>
+                </div>
+                <div style="background-image: url(images/capybara.png);
+                    height: 160px;
+                    background-position: center center;
+                    background-size: cover;
+                    border-radius: 8px;
+                    box-shadow: 2px 2px 6px 2px #ddcccc;
+                    margin-bottom: 15px;">;
+                </div>
+                <div class="h3 text-center fw-900">餐廳名稱</div>
+                <div class="h5">電話：02-12345678</div>
+                <div class="h5">地址：台北市大安區復興南路一段390號</div>
+                <p>簡介: 這是一家以傳統台式料理聞名的餐廳，提供地道的台灣美食。</p>                     
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+
+    <!-- AJAX -->
+    <script>
+        $(function(){
+            $.ajax({
+                url: 'js/json/TravelFood.json',
+                type: 'GET',
+                dataType: 'json',
+                success: showdata,
+                error: function(error){
+                    console.error('Error fetching data:', error);
+                }
+            });
+
+            function showdata(data){
+                console.log(data);
+
+                // 起始先清除範本
+                $('#myrow').empty();
+            
+                data.forEach(function(item){
+
+                    // 先處理空資料防呆
+                    //item = DofaultData(item);
+
+                    let strHTML = `
+                        <div class="col-md-6 col-lg-4 col-xl-3 roller-l">
+                            <div class="roller-l_box">
+                                <button class="btn btn-primary">查看更多</button>
+                            </div>
+                            <div style="background-image: url('${item.PicURL}');
+                                height: 160px;
+                                background-position: center center;
+                                background-size: cover;
+                                border-radius: 8px;
+                                box-shadow: 2px 2px 6px 2px #ddcccc;
+                                margin-bottom: 15px;">;
+                            </div>
+                            <div class="h3 text-center fw-900">${item.Name}</div>
+                            <div class="h5">電話：${item.Tel}</div>
+                            <div class="h5">地址：${item.Address}</div>
+                            <p>簡介: ${item.HostWords}</p>                     
+                        </div>
+                    `;
+                    $('#myrow').append(strHTML);
+                });
+            }
+
+            // 先處理空資料防呆
+            function DofaultData(item){                
+                if(!item.PicURL){
+                    item.PicURL = 'https://fakeimg.pl/300x200/ffcc00/000?text=No+Image';
+                }
+                if(!item.Name){
+                    item.Name = '餐廳名稱未提供';
+                }
+                if(!item.Tel){
+                    item.Tel = '電話未提供';
+                }
+                // ?的寫法
+                item.Address = item.Address ? item.Address : '地址未提供';
+
+                // || 三元運算子寫法
+                item.HostWords = item.HostWords || '簡介未提供';
+                
+
+                return item;
+            }
+
+        });
+    </script>
+
+</body>
+</html>

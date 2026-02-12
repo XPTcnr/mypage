@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人首頁</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/mycss.css">
 
     <style>
@@ -57,7 +59,7 @@
             left: 100px;
             right: 100px;
             background-color: var(--ss-glacier);
-            background-image: url(images/cat.jpg);
+            background-image: url(images/animal/cat.jpg);
             background-size: cover;
             background-position: 0 0;
         }
@@ -101,6 +103,13 @@
             text-decoration: none;
             font-size: 30px;
         }
+
+        .box001{
+            height: 120px;
+            font-size: 30px;
+            margin-top:15px;
+            /* padding-top:50px; */
+        }
     </style>
 </head>
 
@@ -112,19 +121,50 @@
         <div class="box04"></div>
         <div class="userimg"></div>
         <div class="usertext">
-            <h1>XXX</h1>
+            <h1>XP</h1>
             <hr>
             <h2>認真負責</h2>
             <p>具備前後端與教學實務經驗，擅場將複雜技術轉化為可洛帝的解決方案，重視基礎與實作並進</p>
         </div>
     </div>
-    <div class="section02">
+    <!-- <div class="section02">
         <div class="box01">
             <a href="20260127-2.html" target="_blank">作品01</a>
             <a href="20260203-ch01.html" target="_blank">CH01</a>
             <a href="20260203-ch03.html" target="_blank">CH03</a>
         </div>
+    </div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bg-warning">
+                <div class="row">
+                    <div class="col-3">
+                    <div class="box001 bg-info text-center">
+                        <a href="20260127-2.html" target="_blank">作品01</a>
+                    </div>
+                    </div>            
+                    <div class="col-3">
+                    <div class="box001 bg-info text-center">
+                        <a href="20260203-ch01.html" target="_blank">CH01</a>
+                    </div>
+                    </div>            
+                    <div class="col-3">
+                    <div class="box001 bg-info text-center">
+                        <a href="20260203-ch03.html" target="_blank">CH03</a>
+                    </div>
+                    </div>
+                    <div class="col-3">
+                    <div class="box001 bg-info text-center">
+                        <a href="20260212-1.html" target="_blank">地方美食</a>
+                    </div>
+                    </div>            
+                </div>                
+            </div>
+        </div>
     </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 

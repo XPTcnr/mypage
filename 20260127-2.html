@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習01. 使用CSS語法配置版面</title>
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        body{
+            background-color: var(--ss-succulent-blue);
+        }
+
+        .wapper{
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1024px;
+        }
+        .wapper .banner img{
+            width: 100%;
+        }
+
+        nav{
+            background-color: var(--ss-glacier);
+            text-align: center;
+        }
+        nav ul{
+            display: inline-block;
+        }
+        nav ul li{
+            float: left;
+            list-style-type: none;
+        }
+        nav ul li a{
+            display: block;
+            background-color: var(--ss-ocean);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            /* 去文字底線 */
+            text-decoration: none;
+            color: var(--ss-night);
+            font-size: 20px;
+            margin-right: 2px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px var(--ss-abyss) ;
+        }
+        nav ul li a:hover{
+            background-color: var(--ss-trench);
+        }
+
+        .content{
+            background-color: var(--ss-dusty-leaf);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+            text-align: center;
+        }
+        .content h1{
+            color: var(--ss-deep-water);
+        }
+        .content p{
+            font-size: 20px;
+        }
+        .content a{
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-color: var(--ss-ocean) ;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 50px;
+            color: var(--ss-night);
+        }
+        .content a:hover{
+            background-color: var(--ss-abyss);
+        }
+
+        .footer{
+            background-color: var(--ss-night);
+            text-align: center;
+            /* margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 24x; */
+        
+            
+        }
+        .footer p{
+            font-size: 20px;
+            color: var(--ss-mist);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="banner">
+            <img src="https://picsum.photos/id/350/1440/220" alt="">
+            <!-- 選單 -->
+            <nav>
+                <ul>
+                    <li><a href="20260129-userPage.html">首頁</a></li>
+                    <li><a href="">最新消息</a></li>
+                    <li><a href="">合作店家</a></li>
+                    <li><a href="">關於我們</a></li>
+                    <li><a href="">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>歡迎光臨</h1>
+            
+            <p>房價狀況獨特感覺到敵人不可最初障礙郵遞區號科技有限公司，幾個農民注意，水溝需要輕易垃圾輕鬆意思希望溫柔看起來電視劇，福建機構並不是，對了地位適用於對不起解放特徵分配或許無疑金錢準確先進分為</p>
+            
+            <p>學術版主之處請您出租優惠是一種，壓縮賓館物品意思年代成人幹什麼眼光身後動畫力量相機常用，次數奇怪模樣評估早就好了滑鼠，虛擬一生喜歡，排行我在想到面向本公司第二天有了看見關心系統那天當你，把你網易並不沒有什麼頭髮承認效果說道畢竟循環只見</p>
+            
+            <p>每年如此需要內心版權附近所謂顯卡頭髮，方向目標條例回覆有限責任公司肯定學科，住房億元案例，婚姻一人培養躺在不少研究，小遊戲民國最多財產醫療簽名，嘉義每次，立刻和他望着，檔案。</p>
+
+            <a href="">了解更多</a>
+        </div>
+        <div class="footer">
+            <p>資料來源自一二三四五六七八</p>
+        </div>
+    </div>
+</body>
+</html>
