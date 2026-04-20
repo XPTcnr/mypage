@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch11 表單</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+</head>
+
+<body>
+    <div class="container pb-5">
+        <div class="display-3 py-3 my-4 fw-900 text-primary">ch11 表單相關應用</div>
+
+        <div class="h2 py-3 fw-900 text-secondary">1. 表單樣式(form)</div>
+        <div class="row">
+            <div class="col-12">
+                <form id="myForm">
+                    <div class="mb-3">
+                        <label for="" class="form-label">帳號</label>
+                        <input type="text" class="form-control is-invalid" id="username01" placeholder="敘述字數1~6!">
+                        <div class="valid-feedback">輸入符合規定</div>
+                        <div class="invalid-feedback">輸入不符合規定</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">密碼</label>
+                        <input type="password" class="form-control is-invalid" id="password01" placeholder="密碼字數2~8">
+                        <div class="valid-feedback">輸入符合規定</div>
+                        <div class="invalid-feedback">輸入不符合規定</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">E-Mail</label>
+                        <input type="email" class="form-control is-invalid" id="email01" placeholder="Email字數2~10">
+                        <div class="valid-feedback">輸入符合規定</div>
+                        <div class="invalid-feedback">輸入不符合規定</div>                        
+                    </div>
+                    <button type="submit" class="btn btn-primary">送出</button>
+                </form>
+            </div>
+        </div>
+        <hr class="my-5">
+        <div class="h2 py-3 fw-900 text-secondary">2. 表單樣式(不使用)</div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="" class="form-label">帳號</label>
+                    <input type="text" class="form-control is-invalid" id="username02" placeholder="敘述字數1~6!">
+                    <div class="valid-feedback">輸入符合規定</div>
+                    <div class="invalid-feedback">輸入不符合規定</div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">密碼</label>
+                    <input type="password" class="form-control is-invalid" id="password02" placeholder="密碼字數2~8">
+                    <div class="valid-feedback">輸入符合規定</div>
+                    <div class="invalid-feedback">輸入不符合規定</div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">E-Mail</label>
+                    <input type="email" class="form-control is-invalid" id="email02" placeholder="Email字數2~10">
+                    <div class="valid-feedback">輸入符合規定</div>
+                    <div class="invalid-feedback">輸入不符合規定</div>
+                </div>
+                <button type="button" class="btn btn-primary" id="btn02">送出</button>
+            </div>
+        </div>
+
+        <hr class="mt-5">
+        <div class="h2 py-3 fw-900 text-secondary">3. select</div>
+        <div class="row">
+            <div class="col-12">
+                <select name="" id="mycity" class="form-select form-select-lg">
+                    <option value="" class="text-center" disabled selected>***請選擇城市***</option>
+                    <option value="台中市">台中市</option>
+                    <option value="台北市">台北市</option>
+                    <option value="台南市">台南市</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="h4 mt-4 py-3 fw-900 text-danger">選單練習(select) - 使用AI生成資料</div>
+        <div class="row">
+            <div class="col-12">
+                <select name="animal" id="myanimal" class="form-select form-select-lg">
+                    <option value="" class="text-center" disabled selected>***請選擇動物***</option>
+                    <option value="ani_1">動物1</option>
+                    <option value="ani_2">動物2</option>
+                    <option value="ani_3">動物3</option>
+                </select>
+            </div>
+        </div>
+        
+        <hr class="mt-5">
+        <div class="h2 py-3 fw-900 text-secondary">4. range</div>
+        <div class="row">
+            <div class="mb-3">
+                <label for="" class="form-label">數量: <span class="text-success h2 fw-900" id="num_text">50</span>個</label>
+                <input type="range" class="form-range" min="0" max="100" step="1" id="num" value="50">
+            </div>
+        </div>
+
+        <hr class="mt-5">
+        <div class="h2 py-3 fw-900 text-secondary">5. Datalist(串接後端顯示推薦熱門食物) </div>
+        <div class="row">
+            <div class="mb-3">
+                <label for="" class="form-label">美食紀錄</label>
+                <input type="text" class="form-control" list="foodlist">
+                <datalist id="foodlist">
+                    <option value="牛肉麵"></option>
+                    <option value="炒飯"></option>
+                    <option value="漢堡"></option>
+                    <option value="可樂"></option>
+                </datalist>
+            </div>
+        </div>
+
+        <hr class="mt-5">
+        <div class="h2 py-3 fw-900 text-secondary">6. checkbox </div>
+        <div class="row">
+            <div class="mb-3">
+                <div class="form-check">
+                    <input type="checkbox" name="sport" value="跑步" class="form-check-input">
+                    <label class="form-check-label">跑步</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="sport" value="游泳" class="form-check-input">
+                    <label class="form-check-label">游泳</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="sport" value="爬山" class="form-check-input">
+                    <label class="form-check-label">爬山</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="sport" value="重訓" class="form-check-input">
+                    <label class="form-check-label">重訓</label>
+                </div>
+
+                <button class="btn btn-success my-3" id="btn06">確認</button>
+            </div>
+
+            <hr class="mt-5">
+            <div class="h2 py-3 fw-900 text-secondary">7. radio(單選) </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-check">
+                        <input type="radio" name="edu" value="研究所" class="form-check-input">
+                        <label class="form-check-label">研究所</label>
+                    </div>                    
+                    <div class="form-check">
+                        <input type="radio" name="edu" value="大學" class="form-check-input">
+                        <label class="form-check-label">大學</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="edu" value="高中職" class="form-check-input">
+                        <label class="form-check-label">高中職</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="edu" value="其他" class="form-check-input">
+                        <label class="form-check-label">其他</label>
+                    </div>
+                    
+                    <button class="btn btn-success my-3" id="btn07">確認</button>
+                </div>
+
+            <hr class="mt-5">
+            <div class="h2 py-3 fw-900 text-secondary">8. floating </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control" name="" id="" placeholder="">
+                        <label for="" class="form-label">帳號</label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>            
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script>
+
+        // 公有變數
+        let flag_username = false;
+        let flag_password = false;
+        let flag_email    = false;
+
+        let flag_username02 = false;
+        let flag_password02 = false;
+        let flag_email02    = false;
+        
+        const animaData = [
+        {
+            "name": "大象",
+            "description": "擁有長鼻子與巨大的耳朵，是陸地上體型最大的哺乳動物，具有高度智商與情感。",
+            "category": "哺乳類"
+        },
+        {
+            "name": "國王企鵝",
+            "description": "雖然是鳥類但不會飛行，擅長游泳，腹部白色背部黑色，是極地生態的代表。",
+            "category": "鳥類"
+        },
+        {
+            "name": "綠蠵龜",
+            "description": "生活於海洋中的爬蟲類，四肢演化成槳狀以利游泳，壽命極長。",
+            "category": "爬蟲類"
+        },
+        {
+            "name": "大白鯊",
+            "description": "海洋中的頂級掠食者，擁有流線型體型與極強的咬合力。",
+            "category": "魚類"
+        },
+        {
+            "name": "雨林紅眼樹蛙",
+            "description": "擁有鮮紅色的巨大雙眼與亮綠色的背部，是著名的熱帶兩棲動物。",
+            "category": "兩棲類"
+        },
+        {
+            "name": "非洲獅",
+            "description": "群居性的貓科動物，雄獅擁有厚實的鬃毛，負責保護獅群領地。",
+            "category": "哺乳類"
+        },
+        {
+            "name": "金剛鸚鵡",
+            "description": "色彩繽紛的大型鳥類，智商高且能模仿聲音，主要棲息於熱帶雨林。",
+            "category": "鳥類"
+        },
+        {
+            "name": "眼鏡蛇",
+            "description": "具有劇毒，受威脅時會撐開頸部肋骨使其看起來更大，具有威嚇效果。",
+            "category": "爬蟲類"
+        },
+        {
+            "name": "小丑魚",
+            "description": "與海葵共生的熱帶魚類，身體有鮮豔的橘白條紋，對海葵毒素免疫。",
+            "category": "魚類"
+        },
+        {
+            "name": "東方鈴蟾",
+            "description": "身上帶有明顯的警戒色，皮膚能分泌黏液，主要棲息於潮濕環境。",
+            "category": "兩棲類"
+        }
+        ]        
+
+        // 主程式
+        $(function () {
+
+//#region 1. 表單程式(form)
+            // ==============================
+            // 1. 表單程式(form)
+            // ==============================
+            $("#myForm").submit(function (e) {
+                if(flag_username && flag_password && flag_email) {
+                    e.preventDefault();
+                    console.log("from觸發!");
+                    console.log($("#username01").val());
+                    console.log($("#password01").val());
+                    console.log($("#email01").val());
+                } else {
+                    e.preventDefault();
+                    alert("欄位有錯誤! 請修正!");
+                }
+            });
+
+            // 帳號即時監聽
+            $("#username01").blur(function () {
+                console.log($(this).val().length);
+                if ($(this).val().length >= 1 && $(this).val().length <= 6) {
+                    // 符合規定
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    flag_username = true;
+                } else {
+                    // 不符合規定
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    flag_username = false;
+                }
+            });
+
+            // 密碼即時監聽
+            $("#password01").blur(function () {
+                if($(this).val().length >= 2 && $(this).val().length <= 8) {
+                    // 符合規定
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    flag_password = true;
+                } else {
+                    // 不符合規定
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    flag_password = false;
+                }
+            })
+           
+            // Email即時監聽
+            $("#email01").blur(function () {
+                if($(this).val().length >= 2 && $(this).val().length <= 10) {
+                    // 符合規定
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    flag_email = true;
+                } else {
+                    // 不符合規定
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    flag_email = false;
+                }
+            });
+
+            $("#username01").keyup(function () {
+                console.log($("#username01").val());
+            });
+
+            // 數值與焦點同時改變才會觸發
+            $("#password01").change(function () {
+                console.log($("#password01").val());
+            });
+
+            // 焦點同時改變即刻觸發
+            $("#email01").blur(function () {
+                console.log($("#email01").val());
+            });
+//#endregion 1. 表單程式(form)
+        
+//#region 2. 按鈕點擊事件            
+            // ==============================
+            //  2. 按鈕點擊事件
+            // ==============================
+            $("#btn02").click(function () {
+                if (flag_username02 && flag_password02 && flag_email02) {
+                    console.log("按鈕監聽觸發!");
+                    console.log($("#username02").val());
+                    console.log($("#password02").val());
+                    console.log($("#email02").val());
+                } else {
+                    alert("欄位有錯誤! 請修正!");
+                }
+            });
+
+            // 2.1 帳號即時監聽
+            $("#username02").blur(function () {
+                if ($(this).val().length >= 1 && $(this).val().length <= 6) {
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    flag_username02 = true;
+                } else {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    flag_username02 = false;
+                }
+            })  
+            // 2.2 密碼即時監聽
+            $("#password02").blur(function () {
+                if ($(this).val().length >= 2 && $(this).val().length <= 8) {
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    flag_password02 = true;
+                } else {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    flag_password02 = false;
+                }
+            })
+            // 2.3 Email即時監聽
+            $("#email02").blur(function () {
+                if ($(this).val().length >= 2 && $(this).val().length <= 10) {
+                    $(this).removeClass("is-invalid").addClass("is-valid");
+                    flag_email02 = true;
+                } else {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    flag_email02 = false;
+                }
+            })
+//#endregion 2. 按鈕點擊事件
+
+            // ==============================
+            //  3. 按鈕點擊事件
+            // ==============================
+
+            $("#mycity").change(function() {
+                console.log($(this).val());
+            })
+
+            animaData.forEach(function(item) {
+
+                //渲染選單
+                $("#myanimal").empty();
+                $("#myanimal").append(`<option value="" class="text-center" disabled selected>***請選擇動物***</option>`);
+                animaData.forEach(function (item) {
+                    // console.log(item.name);
+                    let strHTML = `<option value="${item.name}">${item.name}</option>`;
+                    $("#myanimal").append(strHTML);
+                });
+                $("#myanimal").change(function () {
+                    console.log($(this).val());
+                });                
+              
+            });
+
+            // ==============================
+            //  4. range
+            // ==============================
+            $("#num").on("input", function(){
+                console.log($(this).val());
+                $("#num_text").text($(this).val());
+            });
+
+            // ==============================
+            // checkbox(複選)
+            // ==============================
+            
+            // 初始值設定
+            $("input[name='sport'][value='重訓']").prop("checked", true);
+            $("#btn06").click(function(){
+                let result  = []; // 儲存勾選的興趣
+
+                $("input[name='sport']:checked").each(function(){
+                    console.log($(this).val());
+                    result.push($(this).val());
+                })
+
+                if(result.length == 0){
+                    alert("至少選擇一個運動!")
+                } else {
+                    console.log(result);
+                }
+            });
+
+
+            // ==============================
+            // radio(單選)
+            // ==============================
+            
+            //初始值設定
+            $("input[name='edu'][value = '高中職']").prop("checked", true);
+            //取出所選取的值
+            $("#btn07").click(function(){
+                $("input[name='edu']:checked").each(function(){
+                    console.log($(this).val());
+                });
+            });
+
+            
+
+        });
+
+    </script>
+
+</body>
+
+</html>

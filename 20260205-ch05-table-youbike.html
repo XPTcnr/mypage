@@ -1,0 +1,92 @@
+<!-- 1. 抓取YouBike資料
+2. 自行印出內容並了解含意
+3. 使用Table 將重要的資料列表
+    ex: 站點名稱, 可借車輛數, 已借出車輛數, 更新時間...等 -->
+
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自行車出借即時狀態</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="css/table-rwd.css">
+
+</head>
+
+<body>
+
+    <div class="title-01 text-center">台北微笑自行車2.0</div>
+    <div class="container">
+        <table class="table table-rwd">
+            <thead class="table-active">
+                <tr>
+                    <th>站點編號</th>
+                    <th>站點名稱</th>
+                    <th>可借車輛</th>
+                    <th>可還車位</th>
+                    <th>總車柱</th>
+                    <th>更新時間</th>
+                    <th>狀態</th>
+                </tr>
+            </thead>
+            <tbody id="mybody">
+                <tr>
+                    <td data-th="站點編號">001</td>
+                    <td data-th="站點名稱">麥當勞站</td>
+                    <td data-th="可借車輛">50</td>
+                    <td data-th="可還車位">40</td>
+                    <td data-th="總車柱">5</td>
+                    <td data-th="更新時間">2026-02-05</td>
+                    <td data-th="狀態">已出借</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script>
+        // 主程式
+        $(function () {
+            $("mytitle").html("台北微笑單車出借狀態")
+
+            // 串接OpenData
+            $.ajax({
+                type: "GET",
+                // url: "http://localhost:5500/js/json/youbike_immediate.json",
+                url:"js/json/youbike_immediate.json", //讀本地端json
+                dataType: "json",
+                success: showdata,
+                error: function () {
+                    console.log("error - js/json/youbike_immediate.json")
+                }
+            });
+        });
+
+        function showdata(data) {
+            console.log(data)
+
+            $("#mybody").empty();
+            data.forEach(function (item) {
+                let strHTML = `
+                <tr>
+                    <td data-th="站點編號"><span>${item.sno}</span></td>
+                    <td data-th="站點名稱">${item.sna}<span></span></td>
+                    <td data-th="可借車輛"><span>${item.available_rent_bikes}</span></td>
+                    <td data-th="可還車位">${item.available_return_bikes}</td>
+                    <td data-th="總車柱"><span>${item.Quantity}</span></td>
+                    <td data-th="更新時間"><span>${item.updateTime}</span></td>
+                    <td data-th="狀態"><span>未知</span></td>
+                </tr>`;
+                $("#mybody").append(strHTML);
+            });
+        }
+    </script>
+</body>
+
+</html>

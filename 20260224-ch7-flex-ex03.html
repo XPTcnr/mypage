@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間軸排版</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        .pimg {
+            height: 260px;
+        }
+
+        .bg-cover {
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline-section::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--graffiti-rust-orange);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-section-pointer {
+            position: relative;
+        }
+
+        .timeline-section-pointer::before {
+            position: absolute;
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: var(--graffiti-concrete-ash);
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            border: 6px solid var(--graffiti-deep-alley);
+        }
+
+        .timeline-section-pointer:hover::before {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline-section::before {
+                display: none;
+            }
+
+            .timeline-section-pointer::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="timeline-section">
+            <div class="row align-items-center timeline-section-pointer">
+                <div class="col-md-6">
+                    <div class="pimg bg-cover" style="background-image: url(images/party/party000.jpg);"></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div>
+                        <div class="h3">產品編號001</div>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+                <div class="col-md-6">
+                    <div class="pimg bg-cover" style="background-image: url(images/party/party001.jpg);"></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div>
+                        <div class="h3">產品編號002</div>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center timeline-section-pointer">
+                <div class="col-md-6">
+                    <div class="pimg bg-cover" style="background-image: url(images/party/party002.jpg);"></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div>
+                        <div class="h3">產品編號003</div>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+                <div class="col-md-6">
+                    <div class="pimg bg-cover" style="background-image: url(images/party/party003.jpg);"></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div>
+                        <div class="h3">產品編號004</div>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                        <p>圖象獎勵兄弟只需引進家庭成功在於以及停。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

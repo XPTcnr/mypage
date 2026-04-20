@@ -1,0 +1,387 @@
+/* ===================================================
+   字型
+   =================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;700&display=swap');
+
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: var(--ss-heat-haze);
+    color: var(--ss-night);
+    margin: 0;
+}
+
+/* ===================================================
+   配色變數
+   =================================================== */
+:root {
+    --ss-mist: #F8FAF9;
+    --ss-surface: #DDE6E4;
+    --ss-dusty-leaf: #A7BCB9;
+    --ss-succulent-blue: #85B8CB;
+    --ss-glacier: #5E9AB0;
+    --ss-deep-water: #3F82A3;
+    --ss-ocean: #1D6A96;
+    --ss-trench: #144D6D;
+    --ss-night: #283B42;
+    --ss-abyss: #1A262A;
+    --ss-dune-gold: #E2B15A;
+    --ss-sahara-sand: #F4D35E;
+    --ss-heat-haze: #EFE6D5;
+    --ss-morning-ember: #FF8C61;
+    --ss-sunset-clay: #D96C06;
+    --ss-copper-canyon: #AD5D4E;
+    --ss-nomad-brown: #7B5040;
+    --ss-scorched-earth: #4D2D18;
+    --ss-basalt-gray: #545454;
+    --ss-cactus-flesh: #8BA888;
+    --ss-sage-shrub: #A0B2A6;
+    --ss-oasis-teal: #008080;
+    --ss-desert-rose: #C38D9E;
+    --ss-mirage-blue: #A2C4C9;
+    --ss-twilight-purple: #4E4E6A;
+    --jp-orange: #FF8C42;
+    --jp-yellow: #FFD166;
+    --jp-soft-cream: #FFF9EC;
+    --jp-brown: #5D4037;
+    --text-color01: #f2f2f5;
+    --graffiti-concrete-ash: #BDBDBF;
+    --graffiti-smog-gray: #8A8C8F;
+    --graffiti-wall-crack: #5F6163;
+    --graffiti-rusty-blue: #5580A0;
+    --graffiti-neon-ocean: #3A6F7D;
+    --graffiti-deep-alley: #002C2F;
+    --graffiti-toxic-teal: #1F4E4A;
+    --graffiti-burnt-ochre: #CC8A4D;
+    --graffiti-rust-orange: #9E5B2A;
+    --graffiti-dried-blood: #7A2E2A;
+    --graffiti-brick-dust: #A14A3B;
+    --graffiti-asphalt-black: #1B1B1B;
+    --graffiti-oil-stain: #0F1412;
+    --graffiti-basement-shadow: #232122;
+    --graffiti-steel-mist: #6F7C7A;
+    --graffiti-lead-gray: #4B4E50;
+    --graffiti-gunmetal: #2F3538;
+    --graffiti-acid-yellow: #C2C94B;
+    --graffiti-toxic-lime: #7E8F3A;
+    --graffiti-faded-purple: #5A4A63;
+}
+
+/* ===================================================
+   文字粗細
+   =================================================== */
+.fw-100 { font-weight: 100; }
+.fw-200 { font-weight: 200; }
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.fw-900 { font-weight: 900; }
+
+/* ===================================================
+   標題工具 class
+   =================================================== */
+.title-01 {
+    font-size: 24px; font-weight: 900;
+    color: var(--ss-mirage-blue);
+    text-shadow: 2px 2px var(--ss-cactus-flesh), 2px 2px rgba(0,0,0,0.6);
+    letter-spacing: 3px;
+}
+.title-02 { font-size: 36px; font-weight: 900; color: var(--ss-twilight-purple); }
+.title-jp-cute {
+    font-size: 32px; font-weight: 900; color: var(--jp-orange);
+    text-shadow: 2px 2px 0px var(--jp-yellow), 4px 4px 0px rgba(255,140,66,0.3), 5px 5px 10px rgba(0,0,0,0.1);
+    letter-spacing: 5px; line-height: 1.5; display: inline-block; transform: rotate(-2deg);
+    font-family: "Microsoft JhengHei", "Rounded Mplus 1c", sans-serif;
+}
+
+/* ===================================================
+   Roller 效果
+   =================================================== */
+.roller-l { position: relative; overflow: hidden; }
+.roller-l .roller-l_box {
+    position: absolute; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(255,204,153,0.25) 0%, rgba(255,140,66,0.55) 40%, rgba(0,180,216,0.45) 100%);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    left: -100%; display: flex; align-items: center; justify-content: center;
+    transition: left 0.9s cubic-bezier(0.77,0,0.175,1), opacity 0.6s ease, transform 0.8s ease;
+    opacity: 0.95; box-shadow: inset 0 0 80px rgba(255,255,255,0.15), 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 12px; transform: scale(1.05);
+}
+.roller-l:hover .roller-l_box { left: 0; }
+
+.roller-r { position: relative; overflow: hidden; }
+.roller-r .roller-r_box {
+    position: absolute; width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(228,205,186,0.3), rgba(214,107,20,0.6));
+    right: -100%; display: flex; align-items: center; justify-content: center; transition: right 1s;
+}
+.roller-r:hover .roller-r_box { right: 0; }
+
+.roller-t { position: relative; overflow: hidden; }
+.roller-t .roller-t_box {
+    position: absolute; width: 100%; height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,140,66,0.5));
+    top: -100%; display: flex; align-items: center; justify-content: center; transition: top 1s;
+}
+.roller-t:hover .roller-t_box { top: 0; }
+
+.roller-b { position: relative; overflow: hidden; }
+.roller-b .roller-b_box {
+    position: absolute; width: 100%; height: 100%;
+    background: linear-gradient(0deg, rgba(255,255,255,0.3), rgba(255,140,66,0.5));
+    bottom: -100%; display: flex; align-items: center; justify-content: center; transition: bottom 1s;
+}
+.roller-b:hover .roller-b_box { bottom: 0; }
+
+/* ===================================================
+   personal：左右分割
+   =================================================== */
+.personal {
+    display: flex;
+    height: 100vh;
+    min-height: 560px;
+}
+
+/* 左側照片欄 */
+.personal-photo {
+    width: 45%;
+    background-image: url('../images/animal/cat.jpg');
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    /* 之後換照片只改這一行 background-image */
+}
+
+/* 右側資訊欄 */
+.personal-info {
+    flex: 1;
+    background-color: var(--ss-mist);
+    display: flex;
+    align-items: center;
+    padding: 48px 56px;
+    /* 淡入動畫 */
+    animation: slideIn 0.8s ease both;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.personal-info-inner {
+    max-width: 380px;
+}
+
+/* 小標籤 PERSONAL */
+.personal-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.4em;
+    color: var(--ss-sage-shrub);
+    margin-bottom: 16px;
+}
+
+/* 大名字 */
+.personal-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: var(--ss-night);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+/* 金色短線 */
+.personal-line {
+    width: 40px;
+    height: 2px;
+    background-color: var(--ss-dune-gold);
+    margin-bottom: 20px;
+}
+
+/* 副標 */
+.personal-sub {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--ss-basalt-gray);
+    margin-bottom: 14px;
+}
+
+/* 說明文字 */
+.personal-desc {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--ss-night);
+    opacity: 0.65;
+    margin-bottom: 32px;
+}
+
+/* 查看作品按鈕 */
+.personal-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    color: var(--ss-night);
+    border: 1px solid var(--ss-dusty-leaf);
+    padding: 10px 24px;
+    border-radius: 2px;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.personal-btn:hover {
+    background-color: var(--ss-dune-gold);
+    border-color: var(--ss-dune-gold);
+    color: var(--ss-night);
+}
+
+/* 手機版：改為上下疊放 */
+@media (max-width: 768px) {
+    .personal { flex-direction: column; height: auto; }
+    .personal-photo { width: 100%; height: 50vw; min-height: 220px; }
+    .personal-info { padding: 36px 24px; }
+    .personal-info-inner { max-width: 100%; }
+}
+
+/* ===================================================
+   區塊共用樣式
+   =================================================== */
+.sec-header {
+    margin-bottom: 36px;
+}
+
+.sec-tag {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--ss-sage-shrub);
+    margin-bottom: 6px;
+}
+
+.sec-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ss-night);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.sec-title::after {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 2px;
+    background-color: var(--ss-dune-gold);
+    bottom: 0; left: 0;
+    border-radius: 2px;
+}
+
+/* ===================================================
+   專題作品 section
+   =================================================== */
+.section-works {
+    background-color: var(--ss-mist);
+    padding: 72px 0 64px;
+    border-top: 1px solid var(--ss-surface);
+}
+
+/* 橫條式卡片：編號 + 名稱 + 箭頭 */
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid var(--ss-surface);
+    border-left: 4px solid var(--ss-dune-gold);
+    border-radius: 4px;
+    padding: 20px 24px;
+    transition: transform 0.2s, box-shadow 0.2s, border-left-color 0.2s;
+}
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(40,59,66,0.10);
+    border-left-color: var(--ss-sunset-clay);
+}
+
+.project-num {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--ss-dusty-leaf);
+    min-width: 36px;
+    line-height: 1;
+}
+
+.project-name {
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+    color: var(--ss-night);
+    flex: 1;
+}
+
+.project-arrow {
+    font-size: 1rem;
+    color: var(--ss-dusty-leaf);
+    transition: transform 0.2s, color 0.2s;
+}
+.project-card:hover .project-arrow {
+    transform: translateX(4px);
+    color: var(--ss-sunset-clay);
+}
+
+/* ===================================================
+   課堂學習 section
+   =================================================== */
+.section-learning {
+    background-color: var(--ss-heat-haze);
+    padding: 72px 0 80px;
+}
+
+/* 格線卡片：編號在上、名稱在下 */
+.learn-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid var(--ss-surface);
+    border-radius: 8px;
+    padding: 20px 12px;
+    height: 96px;
+    gap: 6px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.learn-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(40,59,66,0.10);
+}
+
+.learn-name {
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    color: var(--ss-night);
+    text-align: center;
+    line-height: 1.4;
+}
+.learn-card:hover .learn-name {
+    color: var(--ss-ocean);
+}
+
+/* ===================================================
+   Footer
+   =================================================== */
+.site-footer {
+    background-color: var(--ss-night);
+    color: var(--ss-sage-shrub);
+    text-align: center;
+    padding: 24px 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+}
