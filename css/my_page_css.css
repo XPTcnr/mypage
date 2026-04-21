@@ -155,6 +155,7 @@ body {
 }
 
 /* 右側資訊欄 */
+/* [修正] class 名稱從 hero-* 統一改為 personal-*，與 HTML 一致 */
 .personal-info {
     flex: 1;
     background-color: var(--ss-mist);
@@ -363,6 +364,17 @@ body {
     box-shadow: 0 8px 20px rgba(40,59,66,0.10);
 }
 
+.learn-num {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--ss-glacier);    /* 冰川藍，與專題的金色區分 */
+    background-color: var(--ss-surface);
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+
 .learn-name {
     font-size: 0.82rem;
     letter-spacing: 0.04em;
@@ -384,4 +396,59 @@ body {
     padding: 24px 0;
     font-size: 0.78rem;
     letter-spacing: 0.1em;
+}
+
+/* ===================================================
+   聯絡區塊
+   =================================================== */
+.contact-bar {
+    background-color: var(--ss-night);
+    padding: 20px 0 0;           /* 上方留白，與 footer 融為一體 */
+    text-align: center;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    color: var(--ss-sage-shrub);        /* 低調灰綠色，不搶眼 */
+    padding: 8px 20px;
+    border: 1px solid rgba(160, 178, 166, 0.25);  /* 極淡邊框 */
+    border-radius: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-link:hover {
+    color: var(--ss-dune-gold);
+    border-color: rgba(226, 177, 90, 0.4);
+}
+/* ===================================================
+   聯絡區塊
+   =================================================== */
+.contact-bar {
+    background-color: var(--ss-night);
+    padding: 20px 0 0;
+    text-align: center;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    color: var(--ss-sage-shrub);
+    padding: 8px 20px;
+    border: 1px solid rgba(160, 178, 166, 0.25);
+    border-radius: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-link:hover {
+    color: var(--ss-dune-gold);
+    border-color: rgba(226, 177, 90, 0.4);
 }
